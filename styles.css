@@ -279,23 +279,18 @@ ul { list-style: none; }
 }
 
 .hero-copy .actions,
-.hero-copy .cta {
+.hero-copy .cta,
+.hero-copy .cta-ghost {
   pointer-events: auto;
 }
 
-.eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  letter-spacing: 0.34em;
+.hero-kicker {
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--cyan);
-  opacity: 0.92;
-  padding: 0.4rem 0.95rem;
-  border: 1px solid rgba(168, 232, 240, 0.2);
-  border-radius: 999px;
-  background: rgba(168, 232, 240, 0.05);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  opacity: 0.78;
 }
 
 .hero-copy h1 {
@@ -322,19 +317,94 @@ ul { list-style: none; }
 }
 
 .hero-copy .lead {
-  margin: 1.15rem 0 0;
+  margin: 1.05rem 0 0;
   max-width: 26rem;
   font-size: clamp(0.9rem, 1.7vw, 1.02rem);
   color: var(--muted);
   line-height: 1.8;
 }
 
+.hero-points {
+  margin: 1.15rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.hero-points li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.84rem;
+  letter-spacing: 0.01em;
+  color: rgba(214, 226, 236, 0.78);
+  line-height: 1.45;
+}
+
+.hero-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 10px rgba(168, 232, 240, 0.55);
+  opacity: 0.85;
+}
+
 .actions {
-  margin-top: 1.85rem;
+  margin-top: 1.55rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.95rem;
+  gap: 0.85rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.15rem;
+}
+
+.cta-ghost {
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  color: var(--cyan-bright);
+  opacity: 0.88;
+  border-bottom: 1px solid rgba(168, 232, 240, 0.28);
+  padding-bottom: 0.12rem;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease), opacity 0.25s var(--ease);
+}
+
+.cta-ghost:hover {
+  color: #fff;
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Soft staggered entrance — presence without noise */
+.hero-stack > * {
+  animation: heroIn 0.9s var(--ease) both;
+}
+.hero-stack > :nth-child(1) { animation-delay: 0.05s; }
+.hero-stack > :nth-child(2) { animation-delay: 0.12s; }
+.hero-stack > :nth-child(3) { animation-delay: 0.18s; }
+.hero-stack > :nth-child(4) { animation-delay: 0.24s; }
+.hero-stack > :nth-child(5) { animation-delay: 0.3s; }
+.hero-stack > :nth-child(6) { animation-delay: 0.36s; }
+
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.7rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .cta {
@@ -732,7 +802,8 @@ ul { list-style: none; }
 
 @media (max-height: 620px) and (orientation: landscape) {
   .hero-copy h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
-  .hero-copy .lead { display: none; }
+  .hero-copy .lead,
+  .hero-points { display: none; }
   .scroll-hint { display: none; }
 }
 
@@ -743,6 +814,7 @@ ul { list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .hero-stack > * { animation: none; }
   .cta, .card, .rail figure { transition: none; }
   .cta::after { display: none; }
   .scroll-hint::after,
