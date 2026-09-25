@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>飞舞粒子 · Dancing Particle</title>
+  <meta name="description" content="飞舞粒子 — 集减压、放松与治愈于一身的交互应用。超过 50 种精心打磨的粒子交互效果，指尖轻触，粒子翩然起舞。" />
+  <meta name="keywords" content="飞舞粒子,Dancing Particle,粒子,减压,放松,壁纸,WebGL,interactive,relax,particle" />
+
+  <link rel="canonical" href="./" />
+  <link rel="alternate" hreflang="zh-CN" href="./" />
+  <link rel="alternate" hreflang="en" href="./" />
+  <link rel="alternate" hreflang="ja" href="./" />
+  <link rel="alternate" hreflang="x-default" href="./" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="飞舞粒子 · Dancing Particle" />
+  <meta property="og:description" content="集减压、放松与治愈于一身的交互应用。精心打磨粒子交互效果。" />
+  <meta property="og:image" content="./og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="飞舞粒子 · Dancing Particle" />
+  <meta name="twitter:description" content="集减压、放松与治愈于一身的交互应用。" />
+  <meta name="twitter:image" content="./og-image.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a class="brandmark" href="#top" aria-label="Dancing Particle">
+        <span class="brandmark-dot" aria-hidden="true"></span>
+        <span data-i18n="brand">飞舞粒子</span>
+      </a>
+
+      <div class="topbar-end">
+        <nav class="topnav" aria-label="Primary">
+          <a href="#experience" data-i18n="nav.experience">体验</a>
+          <a href="#about" data-i18n="nav.about">关于</a>
+          <a href="#download" data-i18n="nav.download">下载</a>
+        </nav>
+
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="zh" class="is-on" aria-pressed="true">中</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="ja" aria-pressed="false">日</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Hero">
+      <canvas id="bg" aria-hidden="true"></canvas>
+      <div class="veil" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <div class="hero-stack">
+          <h1 data-i18n="hero.title">飞舞粒子</h1>
+          <p class="tag" data-i18n="hero.tag">Dancing Particle</p>
+          <p class="lead" data-i18n="hero.lead">
+            集减压、放松与治愈于一身的交互应用，精心打磨粒子交互效果。
+          </p>
+          <div class="actions">
+            <a
+              class="cta"
+              id="cta-hero"
+              href="https://apps.apple.com/app/dancing-particle/id6444665083"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <span data-i18n="cta.download">App Store 下载</span>
+            </a>
+            <span class="cta-note" data-i18n="hero.hint">卸下喧嚣，沉入宁静</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#experience" data-i18n="hero.scroll">向下探索</a>
+    </section>
+
+    <div class="sheet">
+      <section class="section" id="experience">
+        <header class="section-head" data-reveal>
+          <h2 data-i18n="exp.title">指尖轻触，粒子起舞</h2>
+          <p data-i18n="exp.sub">超过 50 种独特交互效果，每一款都经过细致打磨，令人一见倾心。</p>
+        </header>
+
+        <div class="cards">
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 3l8 14H4L12 3z" />
+                <path d="M12 10v7" opacity=".5" />
+              </svg>
+            </div>
+            <h3 data-i18n="exp.f1.t">几何体粒子</h3>
+            <p data-i18n="exp.f1.d">半透明三角锥在 GPU 上实时渲染，棱边细高光，疏密随交互流动。</p>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 14c3-6 5-6 8 0s5 6 8 0" />
+                <circle cx="8" cy="10" r="1.2" fill="currentColor" stroke="none" />
+                <circle cx="16" cy="10" r="1.2" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            <h3 data-i18n="exp.f2.t">减压与治愈</h3>
+            <p data-i18n="exp.f2.d">轻柔飞舞、悬浮与流动，把喧嚣隔在屏幕之外，让心情随粒子自由飞翔。</p>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="5" y="3" width="14" height="18" rx="2.5" />
+                <path d="M9 17h6" />
+              </svg>
+            </div>
+            <h3 data-i18n="exp.f3.t">一键成壁纸</h3>
+            <p data-i18n="exp.f3.d">将梦幻粒子效果保存为艺术壁纸，分享给朋友，也为生活添一抹色彩。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <header class="section-head" data-reveal>
+          <h2 data-i18n="about.title">关于飞舞粒子</h2>
+          <p data-i18n="about.sub">远离尘嚣，忘却烦恼，释放压力。</p>
+        </header>
+        <div class="prose" data-reveal>
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+          <p data-i18n="about.p3"></p>
+        </div>
+      </section>
+
+      <section class="section download-section" id="download">
+        <div class="download-inner" data-reveal>
+          <h2 data-i18n="dl.title">立即体验飞舞粒子</h2>
+          <p data-i18n="dl.sub">在 iPhone 与 iPad 上沉浸于静谧治愈的粒子世界。</p>
+          <a
+            class="cta cta--lg"
+            href="https://apps.apple.com/app/dancing-particle/id6444665083"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span data-i18n="cta.download">App Store 下载</span>
+          </a>
+          <p class="cta-note" data-i18n="dl.note">适用于 iOS · 免费体验</p>
+        </div>
+      </section>
+
+      <section class="section keywords-section" aria-label="Keywords">
+        <h2 class="keywords-title" data-i18n="kw.title">关键词</h2>
+        <ul class="keywords" id="keywords"></ul>
+      </section>
+
+      <footer class="foot">
+        <p data-i18n="foot.copy">© Dancing Particle</p>
+        <div class="foot-links">
+          <a
+            href="https://apps.apple.com/app/dancing-particle/id6444665083"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="foot.store"
+          >App Store</a>
+          <a href="#top" data-i18n="foot.top">回到顶部</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

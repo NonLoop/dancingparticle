@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Disallow nothing — public marketing / experience page
+Sitemap: ./sitemap.xml
