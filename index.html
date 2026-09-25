@@ -6,10 +6,13 @@
   <meta name="theme-color" content="#0b0d12" />
   <meta name="color-scheme" content="dark" />
 
-  <title>飞舞粒子 · Dancing Particle</title>
-  <meta name="description" content="飞舞粒子 — 集减压、放松与治愈于一身的交互应用。超过 50 种精心打磨的粒子交互效果，指尖轻触，粒子翩然起舞。" />
-  <meta name="keywords" content="飞舞粒子,Dancing Particle,粒子,减压,放松,壁纸,WebGL,interactive,relax,particle" />
-
+  <title>飞舞粒子 Dancing Particle — 减压放松治愈的粒子交互应用</title>
+  <meta name="description" content="飞舞粒子（Dancing Particle）是一款集减压、放松与治愈于一身的 iOS 交互应用。超过 50 种精心打磨的粒子效果，指尖轻触即可翩然起舞，支持保存艺术壁纸。App Store 评分 4.8。" />
+  <meta name="keywords" content="飞舞粒子,Dancing Particle,粒子交互,减压游戏,放松,治愈,壁纸,ASMR,流体粒子,霓虹,减压,stress relief,particle effects,interactive wallpaper,meditation,relax app,娱乐" />
+  <meta name="author" content="亚杰 刘 / yugakhan Inc" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="application-name" content="Dancing Particle" />
+  <meta name="apple-mobile-web-app-title" content="飞舞粒子" />
   <link rel="canonical" href="./" />
   <link rel="alternate" hreflang="zh-CN" href="./" />
   <link rel="alternate" hreflang="en" href="./" />
@@ -18,18 +21,82 @@
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="飞舞粒子 · Dancing Particle" />
-  <meta property="og:description" content="集减压、放松与治愈于一身的交互应用。精心打磨粒子交互效果。" />
+  <meta property="og:site_name" content="Dancing Particle" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:title" content="飞舞粒子 · Dancing Particle — 减压放松治愈的粒子交互" />
+  <meta property="og:description" content="超过 50 种粒子交互效果，指尖轻触翩然起舞。减压、放松、治愈，一键保存艺术壁纸。iOS App，App Store 评分 4.8。" />
   <meta property="og:image" content="./og-image.svg" />
+  <meta property="og:image:alt" content="Dancing Particle — 飞舞粒子" />
+  <meta property="og:url" content="./" />
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="飞舞粒子 · Dancing Particle" />
-  <meta name="twitter:description" content="集减压、放松与治愈于一身的交互应用。" />
+  <meta name="twitter:description" content="集减压、放松与治愈于一身的粒子交互应用。50+ 精致效果，支持保存壁纸。" />
   <meta name="twitter:image" content="./og-image.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "飞舞粒子 · Dancing Particle",
+        "alternateName": ["Dancing Particle", "飞舞粒子"],
+        "description": "集减压、放松与治愈于一身的粒子交互应用官网。",
+        "inLanguage": ["zh-CN", "en", "ja"],
+        "url": "./"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Dancing Particle",
+        "alternateName": "飞舞粒子",
+        "operatingSystem": "iOS 12.1+",
+        "applicationCategory": "EntertainmentApplication",
+        "applicationSubCategory": "Relaxation",
+        "description": "An interactive application that combines stress relief, relaxation, and healing with over 50 unique particle interaction effects. Save dreamlike scenes as artistic wallpapers.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "103",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "亚杰 刘"
+        },
+        "downloadUrl": "https://apps.apple.com/us/app/dancing-particle/id6444665083",
+        "installUrl": "https://apps.apple.com/us/app/dancing-particle/id6444665083",
+        "screenshot": [
+          "./images/shot-01.jpg",
+          "./images/shot-02.jpg",
+          "./images/shot-03.jpg",
+          "./images/shot-04.jpg"
+        ],
+        "image": "./og-image.svg",
+        "inLanguage": ["en", "zh-Hans"]
+      },
+      {
+        "@type": "Organization",
+        "name": "yugakhan Inc",
+        "url": "./"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="progress" id="progress" aria-hidden="true"></div>
@@ -44,6 +111,7 @@
       <div class="topbar-end">
         <nav class="topnav" aria-label="Primary">
           <a href="#experience" data-i18n="nav.experience">体验</a>
+          <a href="#gallery" data-i18n="nav.gallery">画廊</a>
           <a href="#about" data-i18n="nav.about">关于</a>
           <a href="#download" data-i18n="nav.download">下载</a>
         </nav>
@@ -74,7 +142,7 @@
             <a
               class="cta"
               id="cta-hero"
-              href="https://apps.apple.com/app/dancing-particle/id6444665083"
+              href="https://apps.apple.com/us/app/dancing-particle/id6444665083"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -133,6 +201,27 @@
         </div>
       </section>
 
+      <section class="section gallery-section" id="gallery">
+        <header class="section-head" data-reveal>
+          <h2 data-i18n="gallery.title">粒子世界一瞥</h2>
+          <p data-i18n="gallery.sub">从梦幻光效到治愈场景，每一帧都是精心打磨的互动瞬间。</p>
+        </header>
+        <div class="rail" data-reveal>
+          <figure>
+            <img src="./images/shot-01.jpg" alt="" width="390" height="845" loading="lazy" decoding="async" data-i18n-alt="gallery.a1" />
+          </figure>
+          <figure>
+            <img src="./images/shot-02.jpg" alt="" width="390" height="845" loading="lazy" decoding="async" data-i18n-alt="gallery.a2" />
+          </figure>
+          <figure>
+            <img src="./images/shot-03.jpg" alt="" width="390" height="845" loading="lazy" decoding="async" data-i18n-alt="gallery.a3" />
+          </figure>
+          <figure>
+            <img src="./images/shot-04.jpg" alt="" width="390" height="845" loading="lazy" decoding="async" data-i18n-alt="gallery.a4" />
+          </figure>
+        </div>
+      </section>
+
       <section class="section about-section" id="about">
         <header class="section-head" data-reveal>
           <h2 data-i18n="about.title">关于飞舞粒子</h2>
@@ -151,7 +240,7 @@
           <p data-i18n="dl.sub">在 iPhone 与 iPad 上沉浸于静谧治愈的粒子世界。</p>
           <a
             class="cta cta--lg"
-            href="https://apps.apple.com/app/dancing-particle/id6444665083"
+            href="https://apps.apple.com/us/app/dancing-particle/id6444665083"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -173,7 +262,7 @@
         <p data-i18n="foot.copy">© Dancing Particle</p>
         <div class="foot-links">
           <a
-            href="https://apps.apple.com/app/dancing-particle/id6444665083"
+            href="https://apps.apple.com/us/app/dancing-particle/id6444665083"
             target="_blank"
             rel="noopener noreferrer"
             data-i18n="foot.store"

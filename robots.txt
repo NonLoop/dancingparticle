@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Disallow nothing — public marketing / experience page
+# Public marketing site for Dancing Particle (飞舞粒子)
 Sitemap: ./sitemap.xml

@@ -1,7 +1,7 @@
 import { KEYWORDS, applyLang, detectLang } from "./i18n.js";
 
 const APP_STORE =
-  "https://apps.apple.com/app/dancing-particle/id6444665083";
+  "https://apps.apple.com/us/app/dancing-particle/id6444665083";
 
 function bootUI() {
   let lang = detectLang();

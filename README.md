@@ -26,6 +26,10 @@ Now, why not put aside your work for a moment and let "Dancing Particle" take yo
 さあ、目の前の仕事を一時的に止めて、「Dancing Particle」で喧騒から離れ、悩みを忘れてストレスを発散してみてはいかがでしょうか。 ダンスの粒子で気分を自由に飛ばし、この珍しい静けさとリラクゼーションに浸ってください。
 
 ---
+## 下载
+
+[App Store](https://apps.apple.com/us/app/dancing-particle/id6444665083)
+
 ## 关键词
 firework,wallpaper,fluid,stay,atom,pop,stress,sandbox,flow,triple,magic,glow,drawing,animate,maker,a
 

@@ -3,14 +3,16 @@
 export const KEYWORDS = [
   "firework", "wallpaper", "fluid", "stay", "atom", "pop", "stress", "sandbox",
   "flow", "triple", "magic", "glow", "drawing", "animate", "maker",
-  "particle", "relax", "rainbow", "liquid", "light", "visual",
-  "减压游戏", "壁纸", "粒子", "霓虹", "炫彩", "烟花", "ASMR", "樱花", "动态",
+  "particle", "relax", "rainbow", "liquid", "light", "visual", "ASMR",
+  "减压游戏", "壁纸", "粒子", "霓虹", "炫彩", "烟花", "樱花", "动态",
+  "stress relief", "healing", "meditation", "interactive", "iOS",
 ];
 
 export const STRINGS = {
   zh: {
     brand: "飞舞粒子",
     "nav.experience": "体验",
+    "nav.gallery": "画廊",
     "nav.about": "关于",
     "nav.download": "下载",
     "hero.title": "飞舞粒子",
@@ -27,6 +29,12 @@ export const STRINGS = {
     "exp.f2.d": "轻柔飞舞、悬浮与流动，把喧嚣隔在屏幕之外，让心情随粒子自由飞翔。",
     "exp.f3.t": "一键成壁纸",
     "exp.f3.d": "将梦幻粒子效果保存为艺术壁纸，分享给朋友，也为生活添一抹色彩。",
+    "gallery.title": "粒子世界一瞥",
+    "gallery.sub": "从梦幻光效到治愈场景，每一帧都是精心打磨的互动瞬间。",
+    "gallery.a1": "星光爆发粒子效果",
+    "gallery.a2": "橡皮鸭漂浮场景",
+    "gallery.a3": "流体光晕与游鱼",
+    "gallery.a4": "霓虹几何粒子",
     "about.title": "关于飞舞粒子",
     "about.sub": "远离尘嚣，忘却烦恼，释放压力。",
     "about.p1":
@@ -47,6 +55,7 @@ export const STRINGS = {
   en: {
     brand: "Dancing Particle",
     "nav.experience": "Experience",
+    "nav.gallery": "Gallery",
     "nav.about": "About",
     "nav.download": "Download",
     "hero.title": "Dancing Particle",
@@ -67,6 +76,12 @@ export const STRINGS = {
     "exp.f3.t": "Save as wallpaper",
     "exp.f3.d":
       "Turn dreamlike effects into artistic wallpapers — for your home screen or to share with friends.",
+    "gallery.title": "A glimpse of the particle world",
+    "gallery.sub": "From luminous bursts to soothing scenes — each frame is a carefully crafted interaction.",
+    "gallery.a1": "Starburst particle effect",
+    "gallery.a2": "Floating rubber ducks scene",
+    "gallery.a3": "Fluid glow with swimming fish",
+    "gallery.a4": "Neon geometric particles",
     "about.title": "About Dancing Particle",
     "about.sub": "Step away from the noise. Release the stress.",
     "about.p1":
@@ -87,6 +102,7 @@ export const STRINGS = {
   ja: {
     brand: "Dancing Particle",
     "nav.experience": "体験",
+    "nav.gallery": "ギャラリー",
     "nav.about": "について",
     "nav.download": "ダウンロード",
     "hero.title": "Dancing Particle",
@@ -107,6 +123,12 @@ export const STRINGS = {
     "exp.f3.t": "壁紙として保存",
     "exp.f3.d":
       "夢のようなエフェクトを芸術的な壁紙に。スマホ背景にも、友人へのシェアにも。",
+    "gallery.title": "パーティクルの世界をのぞく",
+    "gallery.sub": "輝く光跡から癒しのシーンまで。ひとつひとつ丁寧に磨き上げたインタラクション。",
+    "gallery.a1": "星のバースト粒子エフェクト",
+    "gallery.a2": "浮かぶアヒルのシーン",
+    "gallery.a3": "流体の光と泳ぐ魚",
+    "gallery.a4": "ネオン幾何パーティクル",
     "about.title": "Dancing Particle について",
     "about.sub": "喧騒から離れ、悩みを忘れ、ストレスを発散する。",
     "about.p1":
@@ -126,10 +148,18 @@ export const STRINGS = {
 };
 
 const LANG_HTML = { zh: "zh-CN", en: "en", ja: "ja" };
+const LANG_OG = { zh: "zh_CN", en: "en_US", ja: "ja_JP" };
+
+const META_TITLE = {
+  zh: "飞舞粒子 Dancing Particle — 减压放松治愈的粒子交互应用",
+  en: "Dancing Particle — Stress Relief & Healing Particle App for iOS",
+  ja: "Dancing Particle — ストレス軽減・癒しのパーティクルアプリ",
+};
+
 const META_DESC = {
-  zh: "飞舞粒子 — 集减压、放松与治愈于一身的交互应用。超过 50 种精心打磨的粒子交互效果。",
-  en: "Dancing Particle — an interactive app for stress relief, relaxation, and healing with 50+ crafted particle effects.",
-  ja: "Dancing Particle — ストレス軽減・リラックス・ヒーリング。50を超える丁寧なパーティクルエフェクト。",
+  zh: "飞舞粒子（Dancing Particle）是一款集减压、放松与治愈于一身的 iOS 交互应用。超过 50 种精心打磨的粒子效果，指尖轻触即可翩然起舞，支持保存艺术壁纸。App Store 评分 4.8。",
+  en: "Dancing Particle is an interactive iOS app for stress relief, relaxation, and healing — with 50+ meticulously crafted particle effects. Swipe to dance with color, save scenes as artistic wallpapers. Rated 4.8 on the App Store.",
+  ja: "Dancing Particleは、ストレス軽減・リラックス・ヒーリングをひとつにしたiOSアプリ。50を超える丁寧なパーティクルエフェクト。指先で舞い、壁紙として保存も。App Store評価4.8。",
 };
 
 export function detectLang() {
@@ -150,16 +180,29 @@ export function applyLang(lang) {
     if (pack[key] != null) el.textContent = pack[key];
   });
 
-  const title =
-    lang === "zh"
-      ? "飞舞粒子 · Dancing Particle"
-      : lang === "ja"
-        ? "Dancing Particle · 飛舞粒子"
-        : "Dancing Particle · 飞舞粒子";
+  document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-alt");
+    if (pack[key] != null) el.setAttribute("alt", pack[key]);
+  });
+
+  const title = META_TITLE[lang] || META_TITLE.zh;
   document.title = title;
 
+  const descText = META_DESC[lang] || META_DESC.zh;
   const desc = document.querySelector('meta[name="description"]');
-  if (desc) desc.setAttribute("content", META_DESC[lang] || META_DESC.zh);
+  if (desc) desc.setAttribute("content", descText);
+
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute("content", title);
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute("content", descText);
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  if (ogLocale) ogLocale.setAttribute("content", LANG_OG[lang] || "zh_CN");
+
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.setAttribute("content", title);
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.setAttribute("content", descText);
 
   document.querySelectorAll(".lang button").forEach((btn) => {
     const on = btn.dataset.lang === lang;

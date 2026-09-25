@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Replace "./" with your production origin after deploy, e.g. https://example.com/ -->
   <url>
     <loc>./</loc>
@@ -10,5 +11,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="./" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="./" />
     <xhtml:link rel="alternate" hreflang="ja" href="./" />
+    <image:image>
+      <image:loc>./images/shot-01.jpg</image:loc>
+      <image:title>Dancing Particle — starburst effect</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>./images/shot-02.jpg</image:loc>
+      <image:title>Dancing Particle — rubber ducks scene</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>./images/shot-03.jpg</image:loc>
+      <image:title>Dancing Particle — fluid glow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>./images/shot-04.jpg</image:loc>
+      <image:title>Dancing Particle — neon geometry</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>./og-image.svg</image:loc>
+      <image:title>Dancing Particle</image:title>
+    </image:image>
   </url>
 </urlset>
